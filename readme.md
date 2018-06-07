@@ -1,6 +1,6 @@
 # PhotoCardRpiR
 
-# Avant Propos
+## Avant Propos
 L'objectif de ce projet et de créer un videur de carte autonome et nomade basé sur un Raspberry pi.
 Le but est de garder le videur de carte le plus simple possible pour une sauvegarde incrémentale des fichiers.
 
@@ -13,3 +13,6 @@ Le but est de garder le videur de carte le plus simple possible pour une sauvega
 ## Logiciel
 * Raspbian Lite
 * Python 3
+
+## Installation
+...
