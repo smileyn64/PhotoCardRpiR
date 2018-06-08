@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 
 import sys
+import time
 
 import dot3k.backlight as backlight
 import dot3k.joystick as nav
@@ -8,7 +9,7 @@ import dot3k.lcd as lcd
 from dot3k.menu import Menu, MenuOption
 
 # Add the root examples dir so Python can find the plugins
-sys.path.append('../../')
+sys.path.append('../../Pimoroni/displayotron/examples/')
 
 from plugins.utils import Backlight, Contrast
 
@@ -17,18 +18,15 @@ from plugins.utils import Backlight, Contrast
 # TODO: Faire les classes de menus
 class Idle(MenuOption):
     def __init__(self, arg):
-        super(Idle, self).__init__()
-        self.arg = arg
+        MenuOption.__init__(self)
 
 class State(MenuOption):
     def __init__(self,arg):
-        super(State, self).__init__()
-        self.arg = arg
+        MenuOption.__init__(self)
 
 class Copy(MenuOption):
     def __init__(self, arg):
-        super(Copy, self).__init__()
-        self.arg = arg
+        MenuOption.__init__(self)
 
 MyIdle = Idle()
 MyState = State()
