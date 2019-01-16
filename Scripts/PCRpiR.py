@@ -70,7 +70,7 @@ def handle_right(pin):
 def handle_button(pin):
     menu.select()
 
-# Loop
-while 1:
-    menu.redraw()
-    time.sleep(0.05)
+## Loop
+#while 1:
+#    menu.redraw()
+#    time.sleep(0.05)
