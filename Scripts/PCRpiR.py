@@ -13,6 +13,8 @@ sys.path.append('../../Pimoroni/displayotron/examples/')
 
 from plugins.utils import Backlight, Contrast
 
+# Initial screen state
+lcd.set_display_mode(True, True, True)
 
 #Classes Declaration
 # TODO: Faire les classes de menus
@@ -33,16 +35,12 @@ MyState = State()
 MyCopy = Copy()
 
 # Menu argument: structure, lcd, idle_handler = None, idle_time = 60
-menu = Menu({
-        'Etat': MyState,
-        'Copie': MyCopy,
-        'Options': {
-            'Display': {
-                'Contrast': Contrast(lcd),
-                'Backlight': Backlight(backlight)
-                        },
-                    },
-            },lcd,MyIdle,30)
+menu = Menu(None,lcd,MyIdle,5) #30s initialy
+
+menu.add_item('Etat',MyState)
+menu.add_item('Copie',MyCopy)
+menu.add_item('Options/Display/Contrast', Contrast(lcd))
+menu.add_item('Options/Display/Backlight', Backlight(backlight))
 
 # Menu Command
 
